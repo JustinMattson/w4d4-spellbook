@@ -13,6 +13,11 @@ main {
   max-height: 40vh;
 }
 
+.active-spell {
+  overflow-y: scroll;
+  max-height: 80vh;
+}
+
 .action {
   cursor: pointer;
 }
