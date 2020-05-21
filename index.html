@@ -20,10 +20,29 @@
     <header class="container-fluid bg-info text-light text-center">
       <h1>spellbook</h1>
     </header>
-    <main class="container"></main>
+    <main class="container">
+      <div class="row">
+        <div class="col">
+          <div class="row d-flex flex-column">
+            <div class="col-12 flex-grow-1 list-container">
+              <h2>Spells</h2>
+              <ol id="apiSpells"></ol>
+            </div>
+            <div class="col-12 flex-grow-1 list-container">
+              <h2>My Spells</h2>
+              <ol id="mySpells"></ol>
+            </div>
+          </div>
+        </div>
+        <div id="activeSpell" class="col h-100">
+          Active column
+        </div>
+      </div>
+    </main>
+
     <footer class="container-fluid bg-info text-light">
       <div class="row text-center">
-        <div class="col">
+        <div class="col-12">
           <p><small>Made with love by Codeworks</small></p>
         </div>
       </div>

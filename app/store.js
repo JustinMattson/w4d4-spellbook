@@ -1,17 +1,20 @@
-import Value from "./Models/Value.js";
+import Spell from "./Models/Spell.js";
+console.log("store");
 
 let _state = {
-  activeValue: new Value({ title: "Value" }),
-  /** @type {Value[]} */
-  values: []
+  activeSpell: null,
+  /** @type {Spell[]} */
+  apiSpells: [],
+  mySpells: [],
 };
 
 /** Collection of listeners to be called based on keyed state changes
  * @type {{[x:string]: function[]}}
  */
 let _listeners = {
-  activeValue: [],
-  values: []
+  activeSpell: [],
+  apiSpells: [],
+  mySpells: [],
 };
 
 //NOTE You should not need to change the code from this point down
@@ -65,7 +68,7 @@ class Store {
   commit(prop, data) {
     _validateProp(prop);
     _state[prop] = data;
-    _listeners[prop].forEach(fn => fn());
+    _listeners[prop].forEach((fn) => fn());
   }
 }
 
